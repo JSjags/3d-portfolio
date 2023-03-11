@@ -1,0 +1,349 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 900,
+      "max": [
+        0.6671749949455261,
+        0.5869449973106384,
+        1.0108469724655151
+      ],
+      "min": [
+        -0.809141993522644,
+        -0.438510000705719,
+        -1.0539510250091553
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 10800,
+      "componentType": 5126,
+      "count": 900,
+      "max": [
+        0.9131796360015869,
+        0.9920805096626282,
+        0.9970343112945557
+      ],
+      "min": [
+        -0.963442862033844,
+        -0.9961575269699097,
+        -0.9970343112945557
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 900,
+      "max": [
+        1.0009880065917969,
+        0.9648380279541016
+      ],
+      "min": [
+        0.003513999981805682,
+        -0.0033030000049620867
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 1428,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 21600,
+      "componentType": 5126,
+      "count": 4972,
+      "max": [
+        1.0618129968643188,
+        1.0459959506988525,
+        1.0235029458999634
+      ],
+      "min": [
+        -1.0447520017623901,
+        -0.8587020039558411,
+        -0.8476349711418152
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 81264,
+      "componentType": 5126,
+      "count": 4972,
+      "max": [
+        0.9981970191001892,
+        0.998893678188324,
+        0.9960495233535767
+      ],
+      "min": [
+        -0.99651700258255,
+        -0.9976215362548828,
+        -0.9975596070289612
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 7200,
+      "componentType": 5126,
+      "count": 4972,
+      "max": [
+        0.997967004776001,
+        0.9611330032348633
+      ],
+      "min": [
+        0.0022269999608397484,
+        0.18835100531578064
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 5712,
+      "componentType": 5125,
+      "count": 8604,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 140928,
+      "componentType": 5126,
+      "count": 960,
+      "max": [
+        1.0283219814300537,
+        1.0283219814300537,
+        1.030208945274353
+      ],
+      "min": [
+        -1.0283219814300537,
+        -1.0283219814300537,
+        -1.030208945274353
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 152448,
+      "componentType": 5126,
+      "count": 960,
+      "max": [
+        0.9922796487808228,
+        0.9922796487808228,
+        0.9877914190292358
+      ],
+      "min": [
+        -0.9922796487808228,
+        -0.9922796487808228,
+        -0.9877914190292358
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 46976,
+      "componentType": 5126,
+      "count": 960,
+      "max": [
+        1.0,
+        0.47238200902938843
+      ],
+      "min": [
+        0.0,
+        0.0
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 40128,
+      "componentType": 5125,
+      "count": 960,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "camelCaseSensitive (https://sketchfab.com/camelCaseSensitive)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/lowpoly-earth-5f6ea1111fda4cf6a7b36cf4ce200d1b",
+      "title": "Lowpoly Earth"
+    },
+    "generator": "Sketchfab-14.88.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 43968,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 54656,
+      "byteOffset": 43968,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 163968,
+      "byteOffset": 98624,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 262592,
+      "uri": "scene.bin"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "material",
+      "pbrMetallicRoughness": {
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.8063508326896291
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "Material",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.0,
+          0.253054,
+          0.023236,
+          1.0
+        ],
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.8504651218778779
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "Material.001",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.0,
+          0.00015,
+          0.20187,
+          1.0
+        ],
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.7618689467077491
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Object_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Object_1",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 5,
+            "POSITION": 4,
+            "TEXCOORD_0": 6
+          },
+          "indices": 7,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Object_2",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 9,
+            "POSITION": 8,
+            "TEXCOORD_0": 10
+          },
+          "indices": 11,
+          "material": 2,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.220446049250313e-16,
+        -1.0,
+        0.0,
+        0.0,
+        1.0,
+        2.220446049250313e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2,
+        3,
+        4
+      ],
+      "name": "LowPolyEarth2.obj.cleaner.materialmerger.gles"
+    },
+    {
+      "mesh": 0,
+      "name": "Object_2"
+    },
+    {
+      "mesh": 1,
+      "name": "Object_3"
+    },
+    {
+      "mesh": 2,
+      "name": "Object_4"
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ]
+}
