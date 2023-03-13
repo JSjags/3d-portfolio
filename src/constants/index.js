@@ -59,58 +59,94 @@ const services = [
   },
 ];
 
+const socials = [
+  {
+    name: "GitHub",
+    url: "https://www.github.com/jsjags",
+    icon: "https://th.bing.com/th/id/R.d5a2822ad75837e11cde38ad497e2da1?rik=ywM5Zzs3hkPXqA&riu=http%3a%2f%2fcdn.onlinewebfonts.com%2fsvg%2fimg_419585.png&ehk=5b6w4jdc7vJXfGK%2bJ3LArgBPQZ2w5wzHMbqaj3ECfVY%3d&risl=&pid=ImgRaw&r=0",
+  },
+  {
+    name: "LinkedIn",
+    url: "https://www.linkedin.com/in/jesse-abuaja",
+    icon: "https://th.bing.com/th/id/R.30aed183321ec208d0373cf6a50c6c55?rik=X%2bsdisNDbH48Bg&pid=ImgRaw&r=0",
+  },
+  {
+    name: "Twitter",
+    url: "https://www.twitter.com/jsjags01",
+    icon: "https://th.bing.com/th/id/R.88568e632a200ce56cae7ede31e81cc8?rik=mBfH%2fCME%2bc6AhA&pid=ImgRaw&r=0",
+  },
+  {
+    name: "Medium",
+    url: "https://medium.com/@jsjags01",
+    icon: "https://avatars.githubusercontent.com/u/923954?s=200&v=4",
+  },
+];
+
 const technologies = [
   {
     name: "HTML 5",
     icon: html,
+    color: "bisque",
   },
   {
     name: "CSS 3",
     icon: css,
+    color: "lightblue",
   },
   {
     name: "JavaScript",
     icon: javascript,
+    color: "lightyellow",
   },
   {
     name: "TypeScript",
     icon: typescript,
+    color: "white",
   },
   {
     name: "React JS",
     icon: reactjs,
+    color: "lightblue",
   },
   {
     name: "Redux Toolkit",
     icon: redux,
+    color: "lavender",
   },
   {
     name: "Tailwind CSS",
     icon: tailwind,
+    color: "azure",
   },
   {
     name: "Node JS",
     icon: nodejs,
+    color: "honeydew",
   },
   {
     name: "MongoDB",
     icon: mongodb,
+    color: "gainsboro",
   },
   {
     name: "Three JS",
     icon: threejs,
+    color: "silver",
   },
   {
     name: "git",
     icon: git,
+    color: "mistyrose",
   },
   {
     name: "figma",
     icon: figma,
+    color: "white",
   },
   {
     name: "docker",
     icon: docker,
+    color: "lightskyblue",
   },
 ];
 
@@ -262,4 +298,4 @@ const projects = [
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { services, technologies, experiences, testimonials, projects, socials };

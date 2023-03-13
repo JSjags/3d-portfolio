@@ -28,8 +28,30 @@
   display: block;
 }
 
-.fullscreen {
-  width: 100vw !important;
+.smaller-fullscreen {
+  width: 125vw !important;
+  height: 100% !important;
+}
+
+.larger-fullscreen {
+  width: 200vw !important;
+  left: -37%;
+}
+
+.bg-glass-black {
+  background: rgba(21, 16, 48, 0.65);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(21, 16, 48, 0.19);
+}
+
+.bg-input {
+  background: rgba(21, 16, 48, 0);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(21, 16, 48, 0.19);
 }
 
 .black-gradient {

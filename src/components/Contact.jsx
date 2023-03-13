@@ -4,10 +4,9 @@ import emailjs from "@emailjs/browser";
 
 import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
-import { SectionWrapper } from "../hoc";
-import { slideIn } from "../utils/motion";
+import { slideIn, staggerContainer } from "../utils/motion";
 
-const Contact = () => {
+const Contact = ({ updateAzimuthalAngle }) => {
   const formRef = useRef();
   const [form, setForm] = useState({
     name: "",
@@ -21,11 +20,11 @@ const Contact = () => {
   const handleSubmit = (e) => {};
 
   return (
-    <div className="relative xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 ">
+    <div className="relative xl:flex-row flex-col-reverse flex gap-10 ">
       {/* Form */}
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
-        className="relative flex-[0.75] bg-black-100 p-8 rounded-2xl z-30"
+        className="relative flex-[0.75] xl:mt-12 bg-glass-black p-8 rounded-2xl z-30"
       >
         <p className={styles.sectionSubText}>Drop me a line</p>
         <h3 className={styles.sectionHeadText}>Contact.</h3>
@@ -33,7 +32,7 @@ const Contact = () => {
         <form
           ref={formRef}
           onSubmit={handleSubmit}
-          className="mt-12 flex flex-col gap-8"
+          className="sm:my-16 pt-8 flex flex-col gap-8"
         >
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Your Name</span>
@@ -43,7 +42,7 @@ const Contact = () => {
               value={form.name}
               onChange={handleChange}
               placeholder="What's your name?"
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+              className="bg-input py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
             />
           </label>
           <label className="flex flex-col">
@@ -54,7 +53,7 @@ const Contact = () => {
               value={form.email}
               onChange={handleChange}
               placeholder="What's your email?"
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+              className="bg-input py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
             />
           </label>
           <label className="flex flex-col">
@@ -66,7 +65,7 @@ const Contact = () => {
               value={form.message}
               onChange={handleChange}
               placeholder="Let's hear it!"
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+              className="bg-input py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
             />
           </label>
 
@@ -84,10 +83,27 @@ const Contact = () => {
         variants={slideIn("right", "tween", 0.2, 1)}
         className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
       >
-        <EarthCanvas />
+        <EarthCanvas updateAzimuthalAngle={updateAzimuthalAngle} />
       </motion.div>
     </div>
   );
 };
 
-export default SectionWrapper(Contact, "contact");
+const SectionWrapper = ({ updateAzimuthalAngle }) => {
+  return (
+    <motion.section
+      variants={staggerContainer()}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.25 }}
+      className={`${styles.paddingX} max-w-7xl mx-auto relative z-0`}
+    >
+      <span className="hidden" id="contact">
+        &nbsp;
+      </span>
+      <Contact updateAzimuthalAngle={updateAzimuthalAngle} />
+    </motion.section>
+  );
+};
+
+export default SectionWrapper;

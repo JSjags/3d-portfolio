@@ -1,26 +1,42 @@
-import { Suspense, useRef } from "react";
+import { Suspense, useState, useEffect, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 
 import CanvasLoader from "../Loader";
 
+const OCC = ({ updateAzimuthalAngle }) => {
+  const orbitControlRef = useRef();
+
+  useFrame(() => {
+    const position = orbitControlRef.current.getAzimuthalAngle();
+
+    updateAzimuthalAngle(position);
+  });
+
+  return (
+    <OrbitControls
+      ref={orbitControlRef}
+      enableZoom={false}
+      maxPolarAngle={Math.PI / 2}
+      minPolarAngle={Math.PI / 2}
+    />
+  );
+};
+
 const Earth = () => {
   const earth = useGLTF("./earth/scene.gltf");
   const moon = useGLTF("./moon/scene.gltf");
+  const sun = useGLTF("./sun/scene.gltf");
   const earthRef = useRef();
-  const moonRef = useRef();
 
   useFrame(() => {
-    //   earthRef.current.rotateX(0.0);
-    //   earthRef.current.rotateZ(-0.003);
     earthRef.current.rotateY(0.001);
   });
 
   return (
     <>
       {/* Moon Light */}
-      <pointLight intensity={0.5} color="#FFF8DE" position={[-1, 3, -5]} />
-
+      <pointLight intensity={0.5} color="#FFF8DE" position={[0, 3, -5]} />
       {/* Sun Light */}
       <pointLight
         intensity={1}
@@ -35,34 +51,81 @@ const Earth = () => {
         castShadow
       />
       <pointLight
-        intensity={0.3}
-        color="#ffffff"
-        position={[0, 5, 5]}
+        intensity={1}
+        color="#F4E99B"
+        position={[0, 3, 5]}
+        castShadow
+      />
+      <pointLight
+        intensity={1}
+        color="#F4E99B"
+        position={[0, 0, 5]}
         castShadow
       />
       <pointLight
         intensity={0.3}
+        color="#ffffff"
+        position={[0, 0, 5]}
+        castShadow
+      />
+      <pointLight
+        intensity={1}
         color="yellow"
         position={[0, 5, 5]}
         castShadow
       />
-      <pointLight intensity={0.1} color="red" position={[0, 5, 5]} castShadow />
-
+      <pointLight intensity={0.5} color="red" position={[0, 5, 5]} castShadow />
+      <pointLight
+        intensity={0.3}
+        color="#ffffff"
+        position={[0, 0, 5]}
+        castShadow
+      />
+      <pointLight
+        intensity={1}
+        color="yellow"
+        position={[0, 5, 5]}
+        castShadow
+      />
+      <pointLight intensity={0.5} color="red" position={[0, 5, 5]} castShadow />
       {/* Space Light */}
       <hemisphereLight intensity={0.2} groundColor="white" />
+      {/* Moon */}
       <primitive object={moon.scene} scale={1} position={[0, 2, -9]} />
+
+      {/* Earth */}
       <primitive
         ref={earthRef}
         object={earth.scene}
-        scale={1.8}
-        position={[2, 0, 0]}
+        scale={2}
+        position={[0, 0, 0]}
         rotation={[-0.2, 0, 0]}
       />
+
+      {/* Sun */}
+      <primitive object={sun.scene} scale={2.5} position={[0, 35, 149]} />
     </>
   );
 };
 
-const EarthCanvas = () => {
+const EarthCanvas = ({ updateAzimuthalAngle }) => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 1280px)");
+    setIsMobile(mediaQuery.matches);
+
+    const handleMediaQueryChange = (e) => {
+      setIsMobile(e.matches);
+    };
+
+    mediaQuery.addEventListener("change", handleMediaQueryChange);
+
+    return () => {
+      mediaQuery.addEventListener("change", handleMediaQueryChange);
+    };
+  }, []);
+
   return (
     <Canvas
       shadows
@@ -74,16 +137,14 @@ const EarthCanvas = () => {
         far: 200,
         position: [-4, 3, 6],
       }}
-      className="relative fullscreen xl:-left-[40%]"
+      className={`${
+        isMobile
+          ? "smaller-fullscreen lg:-left-[20%] md:-left-[25%] sm:-left-[28%] xs:-left-[18%]"
+          : " larger-fullscreen"
+      } relative `}
     >
       <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls
-          // autoRotate
-          enableZoom={false}
-          maxPolarAngle={Math.PI / 2}
-          minPolarAngle={Math.PI / 2}
-          position={[-100, 10, 10]}
-        />
+        <OCC updateAzimuthalAngle={updateAzimuthalAngle} />
         <Earth />
       </Suspense>
       <Preload all />
