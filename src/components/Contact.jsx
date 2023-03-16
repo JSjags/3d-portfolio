@@ -24,7 +24,7 @@ const Contact = ({ updateAzimuthalAngle }) => {
       {/* Form */}
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
-        className="relative flex-[0.75] xl:mt-12 bg-glass-black p-8 rounded-2xl z-30"
+        className="relative flex-[0.75] xl:mt-20 xl:mb-16 bg-glass-black p-8 rounded-2xl z-30"
       >
         <p className={styles.sectionSubText}>Drop me a line</p>
         <h3 className={styles.sectionHeadText}>Contact.</h3>
@@ -32,7 +32,7 @@ const Contact = ({ updateAzimuthalAngle }) => {
         <form
           ref={formRef}
           onSubmit={handleSubmit}
-          className="sm:my-16 pt-8 flex flex-col gap-8"
+          className="sm:my-16 flex flex-col gap-8"
         >
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Your Name</span>

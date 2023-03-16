@@ -21,6 +21,11 @@ import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 
+import gitHub from "../assets/socials/github.png";
+import twitter from "../assets/socials/twitter.png";
+import linkedIn from "../assets/socials/linkedin.png";
+import medium from "../assets/socials/medium.png";
+
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
@@ -59,4 +64,8 @@ export {
   carrent,
   jobit,
   tripguide,
+  gitHub,
+  twitter,
+  linkedIn,
+  medium,
 };

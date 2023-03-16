@@ -112,7 +112,7 @@ const EarthCanvas = ({ updateAzimuthalAngle }) => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia("(max-width: 1280px)");
+    const mediaQuery = window.matchMedia("(max-width: 1080px)");
     setIsMobile(mediaQuery.matches);
 
     const handleMediaQueryChange = (e) => {
@@ -139,9 +139,9 @@ const EarthCanvas = ({ updateAzimuthalAngle }) => {
       }}
       className={`${
         isMobile
-          ? "smaller-fullscreen lg:-left-[20%] md:-left-[25%] sm:-left-[28%] xs:-left-[18%]"
-          : " larger-fullscreen"
-      } relative `}
+          ? "smaller-fullscreen lg:-left-[20%] md:-left-[25%] sm:-left-[28%] max-xs:-left-[18%]"
+          : "larger-fullscreen"
+      } relative`}
     >
       <Suspense fallback={<CanvasLoader />}>
         <OCC updateAzimuthalAngle={updateAzimuthalAngle} />

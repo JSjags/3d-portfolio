@@ -12,6 +12,7 @@ import {
   Works,
 } from "./components";
 import Connect from "./components/Connect";
+import { styles } from "./styles";
 
 const App = () => {
   const azimuthalAngle = useRef(0);
@@ -35,7 +36,7 @@ const App = () => {
         <Works />
         <Feedbacks />
         <div className="relative z-0">
-          <div className="bg-black-100">
+          <div className={`${styles.paddingY} bg-black-100 rounded-[20px]`}>
             <Connect />
           </div>
           <Contact updateAzimuthalAngle={updateAzimuthalAngle} />

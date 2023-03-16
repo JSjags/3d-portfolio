@@ -18,6 +18,17 @@
   color-scheme: dark;
 }
 
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+.inner-img {
+  transform-style: preserve-3d;
+}
+
+.rotate-z {
+  transform: rotateX(50deg);
+}
+
 .font-monosans {
   font-family: monosans;
 }

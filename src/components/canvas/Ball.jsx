@@ -45,10 +45,19 @@ const BallCanvas = ({ icon, color }) => {
       shadows
       // camera={{ position: [20, 3, 5], fov: 25 }}
       gl={{ preserveDrawingBuffer: true }}
+      onPointerOver={(e) => {
+        e.target.style.scale = 1.1;
+        e.target.style.transition = "all 300ms ease";
+      }}
+      onPointerOut={(e) => {
+        e.target.style.scale = 1;
+        e.target.style.transition = "all 300ms ease";
+      }}
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
           enableZoom={false}
+
           // maxPolarAngle={Math.PI / 2}
           // minPolarAngle={Math.PI / 2}
         />
