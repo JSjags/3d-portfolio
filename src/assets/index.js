@@ -29,7 +29,9 @@ import medium from "../assets/socials/medium.png";
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
-import tesla from "./company/tesla.png";
+import brand_logo from "./company/logo.svg";
+import ventaco from "./company/ventaco.jpeg";
+import offload from "./company/kite.svg";
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
@@ -60,7 +62,9 @@ export {
   meta,
   shopify,
   starbucks,
-  tesla,
+  brand_logo,
+  offload,
+  ventaco,
   carrent,
   jobit,
   tripguide,
