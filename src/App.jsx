@@ -36,7 +36,7 @@ const App = () => {
         <Works />
         <Feedbacks />
         <div className="relative z-0">
-          <div className={`${styles.paddingY} bg-black-100 rounded-[20px]`}>
+          <div className={`${styles.paddingY} bg-black-100`}>
             <Connect />
           </div>
           <Contact updateAzimuthalAngle={updateAzimuthalAngle} />

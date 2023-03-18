@@ -24,6 +24,9 @@ import sass from "./tech/sass.png";
 import firebase from "./tech/firebase.png";
 import threejs from "./tech/threejs.svg";
 
+import playstore from "./playstore.png";
+import web_icon from "./web-icon.png";
+
 import gitHub from "../assets/socials/github.png";
 import twitter from "../assets/socials/twitter.png";
 import linkedIn from "../assets/socials/linkedin.png";
@@ -36,9 +39,9 @@ import brand_logo from "./company/logo.svg";
 import ventaco from "./company/ventaco.jpeg";
 import offload from "./company/kite.svg";
 
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
+import offload_poster from "./offload.jpg";
+import schoolzone_poster from "./schoolzone-poster.jpg";
+import gamerange_poster from "./gamerange-poster.jpg";
 
 export {
   logo,
@@ -69,13 +72,15 @@ export {
   shopify,
   starbucks,
   brand_logo,
-  offload,
   ventaco,
-  carrent,
-  jobit,
-  tripguide,
+  offload,
+  offload_poster,
+  schoolzone_poster,
+  gamerange_poster,
   gitHub,
   twitter,
   linkedIn,
   medium,
+  playstore,
+  web_icon,
 };

@@ -20,14 +20,16 @@ import {
   offload,
   ventaco,
   shopify,
-  carrent,
-  jobit,
-  tripguide,
+  offload_poster,
+  schoolzone_poster,
+  gamerange_poster,
   threejs,
   gitHub,
   twitter,
   linkedIn,
   medium,
+  playstore,
+  web_icon,
 } from "../assets";
 
 export const navLinks = [
@@ -244,67 +246,105 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "OffLoad",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "OffLoad is an Android application designed to create a safe place to track your emotions, identify your day to day stress points and to make you become more self aware of certain triggers.",
     tags: [
       {
-        name: "react",
+        name: "react-native",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
-        color: "green-text-gradient",
+        name: "firebase",
+        color: "orange-text-gradient",
       },
       {
         name: "tailwind",
-        color: "pink-text-gradient",
+        color: "cyan-text-gradient",
       },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: offload_poster,
+    source_code_link: "https://github.com/Co-Lab-You-Belong-in-Tech/OffLoad",
+    live_url:
+      "https://play.google.com/store/apps/details?id=com.jsjags01.HeadiesBox",
+    live_url_icon: playstore,
+    live_url_text: "Download from Play Store",
   },
   {
-    name: "Job IT",
+    name: "SchoolZone",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "Web application designed for schools that cannot afford quality administrative staff or employees to manage their data but need an easy, affordable or reliable alternative.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "nodejs",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "express",
+        color: "gray-text-gradient",
+      },
+      {
+        name: "redux",
+        color: "purple-text-gradient",
+      },
+      {
+        name: "mongodb",
+        color: "cyan-text-gradient",
+      },
+      {
+        name: "firebase",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "styledcomponents",
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
+    image: schoolzone_poster,
+    source_code_link: "https://github.com/JSjags/school-zone",
+    live_url: "https://schoolzone.vercel.app",
+    live_url_icon: web_icon,
+    live_url_text: "View Live Demo",
   },
   {
-    name: "Trip Guide",
+    name: "GameRange",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "GameRange is a web application designed for gamers to read and create blog posts, checkout latest video game reviews, watch gameplay videos, game shows and even game trailers.",
     tags: [
       {
-        name: "nextjs",
-        color: "blue-text-gradient",
+        name: "nodejs",
+        color: "green-text-gradient",
       },
       {
-        name: "supabase",
-        color: "green-text-gradient",
+        name: "express",
+        color: "gray-text-gradient",
+      },
+      {
+        name: "ejs",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "restapi",
+        color: "purple-text-gradient",
+      },
+      {
+        name: "mongodb",
+        color: "cyan-text-gradient",
       },
       {
         name: "css",
-        color: "pink-text-gradient",
+        color: "blue-text-gradient",
       },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: gamerange_poster,
+    source_code_link: "https://github.com/JSjags/gamerange-blog",
+    live_url: "https://gamerange.onrender.com",
+    live_url_icon: web_icon,
+    live_url_text: "View Live Demo",
   },
 ];
 

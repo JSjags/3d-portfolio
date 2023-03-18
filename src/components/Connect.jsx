@@ -57,9 +57,7 @@ const Connect = () => {
         className={`${styles.padding} max-w-7xl mx-auto relative z-0 bg-primary rounded-xl`}
       >
         <p className={styles.sectionSubText}>I'm out there</p>
-        <h2 className={`${styles.sectionHeadText} text-yellow-500`}>
-          Connect.
-        </h2>
+        <h2 className={`${styles.sectionHeadText} text-green-400`}>Connect.</h2>
 
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}

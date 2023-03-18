@@ -107,6 +107,35 @@
   background: linear-gradient(90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
   background: -webkit-linear-gradient(-90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
 }
+.green-pink-gradient-shadow {
+  position: relative;
+}
+.green-pink-gradient-shadow::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  border-radius: 1rem;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #161030;
+}
+.green-pink-gradient-shadow::before {
+  content: "";
+  position: absolute;
+  left: -1px;
+  top: -1px;
+  z-index: -1;
+  border-radius: 1rem;
+  display: block;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  background: "#00cea8";
+  background: linear-gradient(90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
+  background: -webkit-linear-gradient(-90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
+}
 
 .orange-text-gradient {
   background: #f12711; /* fallback for old browsers */
@@ -138,6 +167,88 @@
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.orange-text-gradient {
+  background: orangered; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    orange,
+    orangered
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    orange,
+    orangered
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.cyan-text-gradient {
+  background: cyan; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    turquoise,
+    cyan
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    turquoise,
+    cyan
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gray-text-gradient {
+  background: silver; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    silver,
+    gray
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    silver,
+    gray
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.purple-text-gradient {
+  background: orchid; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    fuchsia,
+    orchid
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    fuchsia,
+    orchid
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.github-link {
+  transition: all 200ms ease;
+}
+.github-link > span {
+  transition: all 200ms ease;
+  opacity: 0;
+  display: none;
+}
+.github-link:hover {
+  transition: all 200ms ease;
+  width: fit-content;
+  padding: 0 10px;
+}
+.github-link:hover span {
+  transition: all 200ms ease;
+  display: block;
+  opacity: 1;
 }
 
 .blue-text-gradient {

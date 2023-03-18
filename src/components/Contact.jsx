@@ -27,7 +27,7 @@ const Contact = ({ updateAzimuthalAngle }) => {
         className="relative flex-[0.75] xl:mt-20 xl:mb-16 bg-glass-black p-8 rounded-2xl z-30"
       >
         <p className={styles.sectionSubText}>Drop me a line</p>
-        <h3 className={styles.sectionHeadText}>Contact.</h3>
+        <h3 className={`${styles.sectionHeadText} text-white-100`}>Contact.</h3>
 
         <form
           ref={formRef}
