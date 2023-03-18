@@ -64,7 +64,9 @@
   -webkit-backdrop-filter: blur(8px);
   border: 1px solid rgba(21, 16, 48, 0.19);
 }
-
+.shadow {
+  box-shadow: 0 0 20px red !important;
+}
 .black-gradient {
   background: #000000; /* fallback for old browsers */
   background: -webkit-linear-gradient(
