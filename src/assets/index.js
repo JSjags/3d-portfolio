@@ -19,6 +19,9 @@ import reactjs from "./tech/reactjs.png";
 import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
+import nextjs from "./tech/nextjs.png";
+import sass from "./tech/sass.png";
+import firebase from "./tech/firebase.png";
 import threejs from "./tech/threejs.svg";
 
 import gitHub from "../assets/socials/github.png";
@@ -58,6 +61,9 @@ export {
   redux,
   tailwind,
   typescript,
+  nextjs,
+  sass,
+  firebase,
   threejs,
   meta,
   shopify,

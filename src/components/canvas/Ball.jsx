@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import {
   Decal,
@@ -37,41 +37,49 @@ const Ball = (props) => {
           />
         </mesh>
       </Float>
-      <Html as="div" className="absolute bg-blue-500 left-0">
-        <p>{props.name}</p>
-      </Html>
     </>
   );
 };
 
 const BallCanvas = ({ icon, color, name }) => {
-  return (
-    <Canvas
-      // frameloop="demand"
-      shadows
-      // camera={{ position: [20, 3, 5], fov: 25 }}
-      gl={{ preserveDrawingBuffer: true }}
-      onPointerOver={(e) => {
-        e.target.style.scale = 1.1;
-        e.target.style.transition = "all 300ms ease";
-      }}
-      onPointerOut={(e) => {
-        e.target.style.scale = 1;
-        e.target.style.transition = "all 300ms ease";
-      }}
-      className="overflow-visible bg-red-100"
-    >
-      <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls
-          enableZoom={false}
+  const [showText, setShowText] = useState(false);
 
-          // maxPolarAngle={Math.PI / 2}
-          // minPolarAngle={Math.PI / 2}
-        />
-        <Ball imgUrl={icon} color={color} name={name} />
-      </Suspense>
-      <Preload all />
-    </Canvas>
+  return (
+    <>
+      <Canvas
+        // frameloop="demand"
+        shadows
+        // camera={{ position: [20, 3, 5], fov: 25 }}
+        gl={{ preserveDrawingBuffer: true }}
+        onPointerOver={(e) => {
+          setShowText(true);
+          e.target.style.scale = 1.1;
+          e.target.style.transition = "all 300ms ease";
+        }}
+        onPointerOut={(e) => {
+          setShowText(false);
+          e.target.style.scale = 1;
+          e.target.style.transition = "all 300ms ease";
+        }}
+        className="overflow-visible"
+      >
+        <Suspense fallback={<CanvasLoader />}>
+          <OrbitControls enableZoom={false} />
+          <Ball imgUrl={icon} color={color} />
+
+          <Html as="div" className=" w-full h-full"></Html>
+        </Suspense>
+        <Preload all />
+      </Canvas>
+      <p className={`${showText ? "show-text" : "hide-text"} text-secondary`}>
+        {name}
+      </p>
+      {name === "React JS" && (
+        <p className={`${showText ? "show-text" : "hide-text"} text-secondary`}>
+          React Native
+        </p>
+      )}
+    </>
   );
 };
 

@@ -13,9 +13,9 @@ import {
   nodejs,
   mongodb,
   git,
-  figma,
-  docker,
-  meta,
+  nextjs,
+  sass,
+  firebase,
   brand_logo,
   offload,
   ventaco,
@@ -113,6 +113,11 @@ const technologies = [
     color: "white",
   },
   {
+    name: "Three JS",
+    icon: threejs,
+    color: "silver",
+  },
+  {
     name: "React JS",
     icon: reactjs,
     color: "lightblue",
@@ -121,6 +126,11 @@ const technologies = [
     name: "Redux Toolkit",
     icon: redux,
     color: "lavender",
+  },
+  {
+    name: "Next JS",
+    icon: nextjs,
+    color: "#fffff0",
   },
   {
     name: "Tailwind CSS",
@@ -138,24 +148,14 @@ const technologies = [
     color: "gainsboro",
   },
   {
-    name: "Three JS",
-    icon: threejs,
-    color: "silver",
+    name: "firebase",
+    icon: firebase,
+    color: "white",
   },
   {
     name: "git",
     icon: git,
     color: "mistyrose",
-  },
-  {
-    name: "figma",
-    icon: figma,
-    color: "white",
-  },
-  {
-    name: "docker",
-    icon: docker,
-    color: "lightskyblue",
   },
 ];
 
