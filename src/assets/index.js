@@ -1,8 +1,8 @@
-import logo from "./logo.svg";
-import backend from "./backend.png";
-import creator from "./creator.png";
-import mobile from "./mobile.png";
-import web from "./web.png";
+import my_logo from "./my_brand_logo.svg";
+import backend from "./backend_developer.svg";
+import creator from "./technical_writing.svg";
+import mobile from "./react_native_developer.svg";
+import web from "./web_developer.svg";
 import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
@@ -44,7 +44,7 @@ import schoolzone_poster from "./schoolzone-poster.jpg";
 import gamerange_poster from "./gamerange-poster.jpg";
 
 export {
-  logo,
+  my_logo,
   backend,
   creator,
   mobile,

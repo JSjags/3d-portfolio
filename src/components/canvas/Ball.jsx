@@ -14,7 +14,12 @@ const Ball = (props) => {
   const [decal] = useTexture([props.imgUrl]);
   return (
     <>
-      <Float speed={1.75} rotationIntensity={1} floatIntensity={2}>
+      <Float
+        frustumCulled
+        speed={1.75}
+        rotationIntensity={1}
+        floatIntensity={2}
+      >
         <ambientLight intensity={0.25} />
         <directionalLight color="white" position={[0, 0, 0.05]} />
         <pointLight color="indigo" intensity={1} position={[0, 0.2, 0.05]} />
@@ -47,9 +52,7 @@ const BallCanvas = ({ icon, color, name }) => {
   return (
     <>
       <Canvas
-        // frameloop="demand"
         shadows
-        // camera={{ position: [20, 3, 5], fov: 25 }}
         gl={{ preserveDrawingBuffer: true }}
         onPointerOver={(e) => {
           setShowText(true);

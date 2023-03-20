@@ -43,12 +43,12 @@ const ExperienceCard = ({ experience }) => {
             } 
             ${
               experience.company_name === "Team OffLoad"
-                ? "w-[100%] h-[100%] -translate-x-[10%] translate-y-[5%]"
+                ? "w-[160%] h-[160%] -translate-x-[10%] translate-y-[5%]"
                 : "w-[60%] h-[60%]"
             } 
             ${
               experience.company_name === "Ventaco Inc"
-                ? "w-[100%] h-[100%] rounded-full"
+                ? "w-[160%] h-[160%] rounded-full"
                 : "w-[60%] h-[60%]"
             } 
             object-contain`}

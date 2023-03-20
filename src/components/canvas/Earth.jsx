@@ -91,19 +91,25 @@ const Earth = () => {
       {/* Space Light */}
       <hemisphereLight intensity={0.2} groundColor="white" />
       {/* Moon */}
-      <primitive object={moon.scene} scale={1} position={[0, 2, -9]} />
+      <mesh frustumCulled>
+        <primitive object={moon.scene} scale={1} position={[0, 2, -9]} />
+      </mesh>
 
       {/* Earth */}
-      <primitive
-        ref={earthRef}
-        object={earth.scene}
-        scale={2}
-        position={[0, 0, 0]}
-        rotation={[-0.2, 0, 0]}
-      />
+      <mesh frustumCulled>
+        <primitive
+          ref={earthRef}
+          object={earth.scene}
+          scale={2}
+          position={[0, 0, 0]}
+          rotation={[-0.2, 0, 0]}
+        />
+      </mesh>
 
       {/* Sun */}
-      <primitive object={sun.scene} scale={2.5} position={[0, 35, 149]} />
+      <mesh frustumCulled>
+        <primitive object={sun.scene} scale={2.5} position={[0, 35, 149]} />
+      </mesh>
     </>
   );
 };

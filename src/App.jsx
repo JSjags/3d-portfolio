@@ -21,12 +21,10 @@ const App = () => {
     azimuthalAngle.current = value;
   }
 
-  console.log(typeof updateAzimuthalAngle);
-
   return (
     <BrowserRouter>
       <div className="relative z-0 bg-primary overflow-hidden">
-        <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
+        <div className="bg-hero bg-cover bg-no-repeat bg-center">
           <Navbar />
           <Hero />
         </div>
@@ -39,8 +37,10 @@ const App = () => {
           <div className={`${styles.paddingY} bg-black-100`}>
             <Connect />
           </div>
-          <Contact updateAzimuthalAngle={updateAzimuthalAngle} />
-          <StarsCanvas azimuthalAngle={azimuthalAngle} />
+          <div id="contact">
+            <Contact updateAzimuthalAngle={updateAzimuthalAngle} />
+            <StarsCanvas azimuthalAngle={azimuthalAngle} />
+          </div>
         </div>
       </div>
     </BrowserRouter>

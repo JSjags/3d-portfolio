@@ -20,11 +20,12 @@ const ServiceCard = ({ index, name, icon, color, url }) => {
       perspective={500}
       scale={scale}
       transitionSpeed={2500}
-      className="xs:w-[100px] w-full preserve-3d cursor-pointer"
+      className="xs:w-[100px] w-full max-w-[100px] preserve-3d cursor-pointer"
       onEnter={(e) => setScale(1.2)}
       onLeave={(e) => setScale(1)}
     >
       <motion.div
+        onClick={() => window.open(url, "blank", "noreferrer noopener")}
         variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
         className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card inner-img"
       >

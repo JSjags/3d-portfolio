@@ -16,6 +16,7 @@ import {
   nextjs,
   sass,
   firebase,
+  my_logo,
   brand_logo,
   offload,
   ventaco,
@@ -163,9 +164,9 @@ const technologies = [
 
 const experiences = [
   {
-    title: "React.js Developer",
+    title: "React JS Developer",
     company_name: "Freelance",
-    icon: brand_logo,
+    icon: my_logo,
     iconBg: "#000000",
     date: "March 2020 - August 2022",
     points: [
@@ -188,19 +189,19 @@ const experiences = [
       "Implementing responsive design and ensuring compatibility for varying screen sizes.",
     ],
   },
-  {
-    title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
-    iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
+  // {
+  //   title: "Web Developer",
+  //   company_name: "Shopify",
+  //   icon: shopify,
+  //   iconBg: "#383E56",
+  //   date: "Jan 2022 - Jan 2023",
+  //   points: [
+  //     "Developing and maintaining web applications using React.js and other related technologies.",
+  //     "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+  //     "Implementing responsive design and ensuring cross-browser compatibility.",
+  //     "Participating in code reviews and providing constructive feedback to other developers.",
+  //   ],
+  // },
   {
     title: "Full stack Developer",
     company_name: "Ventaco Inc",
@@ -313,7 +314,7 @@ const projects = [
   {
     name: "GameRange",
     description:
-      "GameRange is a web application designed for gamers to read and create blog posts, checkout latest video game reviews, watch gameplay videos, game shows and even game trailers.",
+      "Web application designed for gamers to read and create blog posts, checkout latest video game reviews, watch gameplay videos, game shows and game trailers.",
     tags: [
       {
         name: "nodejs",
