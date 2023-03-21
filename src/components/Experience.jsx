@@ -38,18 +38,18 @@ const ExperienceCard = ({ experience }) => {
             className={`
             ${
               experience.company_name === "Freelance"
-                ? "w-[100%] h-[100%] -translate-y-[5%]"
-                : "w-[60%] h-[60%]"
+                ? "w-[60%] h-[60%] -translate-y-[5%]"
+                : null
             } 
             ${
               experience.company_name === "Team OffLoad"
                 ? "w-[160%] h-[160%] -translate-x-[10%] translate-y-[5%]"
-                : "w-[60%] h-[60%]"
+                : null
             } 
             ${
               experience.company_name === "Ventaco Inc"
                 ? "w-[160%] h-[160%] rounded-full"
-                : "w-[60%] h-[60%]"
+                : null
             } 
             object-contain`}
           />

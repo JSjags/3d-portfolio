@@ -55,7 +55,7 @@ const Connect = () => {
     <>
       <motion.div
         variants={textVariant()}
-        className={`${styles.padding} max-w-7xl mx-auto relative z-0 bg-primary rounded-xl`}
+        className={`${styles.padding} max-w-7xl mx-auto relative z-0 bg-black-200 rounded-xl`}
       >
         <p className={styles.sectionSubText}>I'm out there</p>
         <h2 className={`${styles.sectionHeadText} text-green-400`}>Connect.</h2>

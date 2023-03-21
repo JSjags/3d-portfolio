@@ -118,7 +118,7 @@ const Contact = ({ updateAzimuthalAngle }) => {
         {/* Form */}
         <motion.div
           variants={slideIn("left", "tween", 0.2, 1)}
-          className="relative flex-[0.75] xl:mt-20 xl:mb-16 mb-10 bg-glass-black px-8 pt-8 rounded-2xl z-30"
+          className="relative flex-[0.75] xl:mt-20 xl:mb-16 mb-10 bg-glass-black px-8 pt-8 max-md:pb-8 rounded-2xl z-30"
         >
           <p className={styles.sectionSubText}>Drop me a line</p>
           <h3 className={`${styles.sectionHeadText} text-white-100`}>
