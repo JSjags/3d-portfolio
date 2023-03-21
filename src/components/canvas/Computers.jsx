@@ -55,7 +55,7 @@ const Computers = ({ isMobile }) => {
         <mesh position={[0.3, 0.18, 0]} rotation={[0, 0.0029, 0.069]}>
           <Html
             transform
-            position={isMobile ? [-1.45, 2.95, 3] : [-1.45, 2.95, 3]}
+            position={isMobile ? [-1.45, 2.95, 3] : [-1.465, 2.95, 3]}
             rotation={isMobile ? [0, 1.568, 0] : [0, 1.568, 0]}
             occlude="blending"
             distanceFactor={2.47}
