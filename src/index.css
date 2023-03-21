@@ -136,6 +136,13 @@
   background: -webkit-linear-gradient(-90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
 }
 
+.green_text {
+  color: #00cea8;
+  text-decoration: underline solid #00cea8 2px;
+  text-decoration: edges;
+  text-underline-offset: 2px;
+}
+
 .green-pink-gradient {
   background: "#00cea8";
   background: linear-gradient(90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
