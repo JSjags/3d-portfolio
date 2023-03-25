@@ -13,6 +13,7 @@ const Loader = () => {
           fontWeight: 800,
           marginTop: 40,
         }}
+        className={`${progress.valueOf() === 100 ? "block" : "hidden"}`}
       >
         {progress.toFixed(2)}%
       </p>

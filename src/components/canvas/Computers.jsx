@@ -8,6 +8,7 @@ import {
   OrbitControls,
   Preload,
   useGLTF,
+  useProgress,
 } from "@react-three/drei";
 
 import CanvasLoader from "../Loader";
@@ -17,6 +18,8 @@ const Computers = ({ isMobile }) => {
   const computer = useGLTF("./desktop_pc/scene.gltf");
   const laptop = useGLTF("./laptop/scene.gltf");
   const officeChair = useGLTF("./office_chair/scene.gltf");
+
+  const { progress } = useProgress();
 
   return (
     <mesh castShadow={true} frustumCulled={true}>
@@ -57,7 +60,7 @@ const Computers = ({ isMobile }) => {
             transform
             position={isMobile ? [-1.45, 2.95, 3] : [-1.465, 2.95, 3]}
             rotation={isMobile ? [0, 1.568, 0] : [0, 1.568, 0]}
-            occlude="blending"
+            occlude={progress.valueOf() === 100 ? "blending" : "raycast"}
             distanceFactor={2.47}
             className="-z-20"
           >
@@ -89,14 +92,14 @@ const Computers = ({ isMobile }) => {
             transform
             position={isMobile ? [-0.37, 0.85, 3] : [-0.37, 0.85, 3]}
             rotation={isMobile ? [-0.04, 0, -0.068] : [-0.04, 0, -0.068]}
-            occlude="blending"
+            occlude={progress.valueOf() === 100 ? "blending" : "raycast"}
             distanceFactor={0.94}
           >
-            <iframe
+            {/* <iframe
               className="w-[1300px] h-[855px] rounded-[24px] bg-[url(/my_brand_logo.svg)] bg-[length:60%_60%] bg-center bg-black-100 bg-no-repeat"
               src="https://jesseabuaja.tech"
               // src="https://www.google.com/webhp?igu=1"
-            ></iframe>
+            ></iframe> */}
           </Html>
         </mesh>
       </primitive>
@@ -114,6 +117,7 @@ const Computers = ({ isMobile }) => {
 };
 
 const ComputersCanvas = () => {
+  const { progress } = useProgress();
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -137,12 +141,14 @@ const ComputersCanvas = () => {
       shadows
       camera={{ position: [20, 3, 5], fov: 25 }}
       gl={{ preserveDrawingBuffer: true }}
+      className={`${progress.valueOf() === 100 ? "block" : "hidden"}`}
     >
       <Html
         position={[0, -5, 0]}
         as="div"
-        className="w-[100%] h-[100%] bg-black"
-        occlude="blending"
+        className={`${
+          progress.valueOf() === 100 ? "block" : "hidden"
+        } w-[100%] h-[100%] bg-red z-20`}
       >
         <div className="absolute xs:bottom-10 bottom-8 w-full flex justify-center items-center z-50">
           <a href="#about">
@@ -162,7 +168,7 @@ const ComputersCanvas = () => {
           </a>
         </div>
       </Html>
-      <Suspense fallback={<CanvasLoader />}>
+      <Suspense>
         <OrbitControls
           enableZoom={false}
           maxPolarAngle={Math.PI / 2}

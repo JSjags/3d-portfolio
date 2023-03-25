@@ -35,7 +35,6 @@ import medium from "../assets/socials/medium.png";
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
-import brand_logo from "./company/logo.svg";
 import ventaco from "./company/ventaco.jpeg";
 import offload from "./company/kite.svg";
 
@@ -71,7 +70,6 @@ export {
   meta,
   shopify,
   starbucks,
-  brand_logo,
   ventaco,
   offload,
   offload_poster,

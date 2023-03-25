@@ -103,6 +103,8 @@ const Works = () => {
           links to code repositories and live demos in it. It reflects my
           ability to solve complex problems, work wth different technologies,
           and manage projects effectively.
+          <br />
+          For more of my works and projects, please visit my github profile.
         </motion.p>
       </div>
 

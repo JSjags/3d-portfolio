@@ -17,7 +17,6 @@ import {
   sass,
   firebase,
   my_logo,
-  brand_logo,
   offload,
   ventaco,
   shopify,
