@@ -16,7 +16,7 @@ const Preloader = () => {
           src={my_logo}
           className={`${
             rest.loaded === 95 ? "hide-logo" : ""
-          } w-[20%] max-w-[200px]`}
+          } w-[20%] max-w-[100px]`}
           alt="brand-logo"
         />
 
@@ -27,7 +27,10 @@ const Preloader = () => {
                 ${rest.loaded > 0 && rest.loaded < 26 && "-translate-y-[25%]"} 
                 ${rest.loaded > 25 && rest.loaded < 51 && "-translate-y-[50%]"} 
                 ${rest.loaded > 50 && rest.loaded < 76 && "-translate-y-[75%]"} 
-                ${rest.loaded >= 95 && "-translate-y-[100%] hide-status"} 
+                ${
+                  progress.valueOf() === 100 &&
+                  "-translate-y-[100%] hide-status"
+                } 
                 `}
           >
             {loadingStatus.map((status, i) => (
@@ -42,22 +45,22 @@ const Preloader = () => {
       <div className={`absolute z-40 top-0 left-0 w-full h-full flex`}>
         <div
           className={`${
-            rest.loaded >= 95 ? "open-blinders" : ""
+            progress.valueOf() === 100 ? "open-blinders" : ""
           } w-1/4 h-full border-r border-transparent border-solid bg-tertiary`}
         ></div>
         <div
           className={`${
-            rest.loaded >= 95 ? "open-blinders" : ""
+            progress.valueOf() === 100 ? "open-blinders" : ""
           } w-1/4 h-full border-r border-transparent border-solid bg-tertiary`}
         ></div>
         <div
           className={`${
-            rest.loaded >= 95 ? "open-blinders" : ""
+            progress.valueOf() === 100 ? "open-blinders" : ""
           } w-1/4 h-full border-r border-transparent border-solid bg-tertiary`}
         ></div>
         <div
           className={`${
-            rest.loaded >= 95 ? "open-blinders" : ""
+            progress.valueOf() === 100 ? "open-blinders" : ""
           } w-1/4 h-full border-r border-transparent border-solid bg-tertiary`}
         ></div>
       </div>
