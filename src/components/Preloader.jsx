@@ -1,5 +1,4 @@
 import { useProgress } from "@react-three/drei";
-import { useEffect, useMemo, useState } from "react";
 import { my_logo } from "../assets";
 import { loadingStatus } from "../constants";
 
@@ -16,7 +15,7 @@ const Preloader = () => {
         <img
           src={my_logo}
           className={`${
-            progress.valueOf() === 100 ? "hide-logo" : ""
+            rest.loaded === 95 ? "hide-logo" : ""
           } w-[20%] max-w-[200px]`}
           alt="brand-logo"
         />
@@ -28,10 +27,7 @@ const Preloader = () => {
                 ${rest.loaded > 0 && rest.loaded < 26 && "-translate-y-[25%]"} 
                 ${rest.loaded > 25 && rest.loaded < 51 && "-translate-y-[50%]"} 
                 ${rest.loaded > 50 && rest.loaded < 76 && "-translate-y-[75%]"} 
-                ${
-                  progress.valueOf() === 100 &&
-                  "-translate-y-[100%] hide-status"
-                } 
+                ${rest.loaded >= 95 && "-translate-y-[100%] hide-status"} 
                 `}
           >
             {loadingStatus.map((status, i) => (
@@ -46,22 +42,22 @@ const Preloader = () => {
       <div className={`absolute z-40 top-0 left-0 w-full h-full flex`}>
         <div
           className={`${
-            progress.valueOf() === 100 ? "open-blinders" : ""
+            rest.loaded >= 95 ? "open-blinders" : ""
           } w-1/4 h-full border-r border-transparent border-solid bg-tertiary`}
         ></div>
         <div
           className={`${
-            progress.valueOf() === 100 ? "open-blinders" : ""
+            rest.loaded >= 95 ? "open-blinders" : ""
           } w-1/4 h-full border-r border-transparent border-solid bg-tertiary`}
         ></div>
         <div
           className={`${
-            progress.valueOf() === 100 ? "open-blinders" : ""
+            rest.loaded >= 95 ? "open-blinders" : ""
           } w-1/4 h-full border-r border-transparent border-solid bg-tertiary`}
         ></div>
         <div
           className={`${
-            progress.valueOf() === 100 ? "open-blinders" : ""
+            rest.loaded >= 95 ? "open-blinders" : ""
           } w-1/4 h-full border-r border-transparent border-solid bg-tertiary`}
         ></div>
       </div>
