@@ -1,6 +1,7 @@
 import { useProgress } from "@react-three/drei";
 import { useEffect, useMemo, useState } from "react";
 import { my_logo } from "../assets";
+import { loadingStatus } from "../constants";
 
 const Preloader = () => {
   const { progress, ...rest } = useProgress();
@@ -19,11 +20,23 @@ const Preloader = () => {
           } w-[20%] max-w-[200px]`}
           alt="brand-logo"
         />
-        {/* Progress Bar */}
-        <div className="relative bg-black-200 w-[50%] max-w-[480px] h-1 rounded-full">
+
+        {/* Loading Status */}
+        <div className={`mt-4 overflow-hidden h-6`}>
           <div
-            className={`w-[${rest.loaded}px] h-1 bg-white rounded-full smoothload-[${rest.loaded}]`}
-          ></div>
+            className={`translate-y-25 duration-300 ease-in-out flex flex-col justify-center mx-auto overflow-hidden
+                ${rest.loaded > 0 && rest.loaded < 26 && "-translate-y-[25%]"} 
+                ${rest.loaded > 25 && rest.loaded < 51 && "-translate-y-[50%]"} 
+                ${rest.loaded > 50 && rest.loaded < 76 && "-translate-y-[75%]"} 
+                ${rest.loaded === 95 && "-translate-y-[100%] hide-status"} 
+                `}
+          >
+            {loadingStatus.map((status, i) => (
+              <p key={i} className="text-center">
+                {status}
+              </p>
+            ))}
+          </div>
         </div>
       </div>
       {/* blinds */}

@@ -348,4 +348,19 @@ const projects = [
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects, socials };
+const loadingStatus = [
+  "Loading Assets",
+  "Preparing Canvas",
+  "Adding lights",
+  "Everything is set",
+];
+
+export {
+  services,
+  technologies,
+  experiences,
+  testimonials,
+  projects,
+  socials,
+  loadingStatus,
+};

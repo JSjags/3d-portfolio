@@ -357,6 +357,11 @@
   transition: all 500ms ease-in-out;
 }
 
+.hide-status {
+  transform: translateY(-100vh);
+  transition: all 500ms ease-in-out;
+}
+
 .open-blinders:nth-child(1) {
   position: relative;
   transition-delay: 500ms;
