@@ -6,7 +6,6 @@ import { fadeIn, textVariant } from "../utils/motion";
 import { styles } from "../styles";
 import SectionWrapper from "../hoc/SectionWrapper";
 import { socials } from "../constants";
-import { BallCanvas } from "./canvas";
 
 const ServiceCard = ({ index, name, icon, color, url }) => {
   const [scale, setScale] = useState(1);
