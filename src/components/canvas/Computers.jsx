@@ -95,11 +95,11 @@ const Computers = ({ isMobile }) => {
             occlude={progress.valueOf() === 100 ? "blending" : "raycast"}
             distanceFactor={0.94}
           >
-            {/* <iframe
+            <iframe
               className="w-[1300px] h-[855px] rounded-[24px] bg-[url(/my_brand_logo.svg)] bg-[length:60%_60%] bg-center bg-black-100 bg-no-repeat"
-              src="https://jesseabuaja.tech"
+              src="https://gamerange.onrender.com/reviews"
               // src="https://www.google.com/webhp?igu=1"
-            ></iframe> */}
+            ></iframe>
           </Html>
         </mesh>
       </primitive>
