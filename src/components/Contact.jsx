@@ -128,7 +128,7 @@ const Contact = ({ updateAzimuthalAngle }) => {
           <form
             ref={formRef}
             onSubmit={handleSubmit}
-            className="sm:my-16 flex flex-col gap-8"
+            className="sm:my-16 my-10 flex flex-col gap-8"
           >
             <label className="flex flex-col">
               <span className="text-white font-medium mb-4">Your Name</span>

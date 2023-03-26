@@ -25,7 +25,7 @@ const ProjectCard = ({
         glareBorderRadius="20px"
         glareColor="violet"
         glareMaxOpacity={0.2}
-        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full green-pink-gradient-shadow"
+        className="bg-tertiary p-5 rounded-2xl sm:w-[340px] w-full green-pink-gradient-shadow"
       >
         <div className="relative w-full h-[230px]">
           <img
@@ -73,7 +73,7 @@ const ProjectCard = ({
         </div>
         <div className="mt-6 flex flex-wrap gap-2">
           {tags.map((tag, index) => (
-            <p key={tag.name} className={`text-[14px] ${tag.color}`}>
+            <p key={tag.name} className={`text-[12px] ${tag.color}`}>
               #{tag.name}
             </p>
           ))}

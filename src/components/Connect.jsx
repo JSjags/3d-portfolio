@@ -71,7 +71,7 @@ const Connect = () => {
           connect.
         </motion.p>
 
-        <div className=" mt-12 flex flex-row flex-wrap gap-10">
+        <div className=" mt-12 flex flex-row flex-wrap gap-6">
           {socials.map((social, index) => (
             <ServiceCard key={social.name} index={index} {...social} />
           ))}

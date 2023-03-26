@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 
 import { Canvas } from "@react-three/fiber";
 import {
-  Environment,
   Html,
   OrbitControls,
   Preload,
@@ -11,8 +10,7 @@ import {
   useProgress,
 } from "@react-three/drei";
 
-import CanvasLoader from "../Loader";
-import { DoubleSide, MeshBasicMaterial } from "three";
+import { MeshBasicMaterial } from "three";
 
 const Computers = ({ isMobile }) => {
   const computer = useGLTF("./desktop_pc/scene.gltf");
