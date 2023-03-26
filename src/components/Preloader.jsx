@@ -4,6 +4,7 @@ import { loadingStatus } from "../constants";
 
 const Preloader = () => {
   const { progress, ...rest } = useProgress();
+  console.log(rest.loaded);
 
   return (
     <div
