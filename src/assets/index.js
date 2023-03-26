@@ -36,7 +36,7 @@ import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import ventaco from "./company/ventaco.jpeg";
-import offload from "./company/kite.svg";
+import offload from "./company/Kite.svg";
 
 import offload_poster from "./offload.jpg";
 import schoolzone_poster from "./schoolzone-poster.jpg";
