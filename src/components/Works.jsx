@@ -25,7 +25,7 @@ const ProjectCard = ({
         glareBorderRadius="20px"
         glareColor="violet"
         glareMaxOpacity={0.2}
-        className="bg-tertiary p-5 rounded-2xl sm:w-[340px] w-full green-pink-gradient-shadow"
+        className="bg-tertiary p-5 rounded-2xl sm:w-[340px] h-[100%] w-full green-pink-gradient-shadow"
       >
         <div className="relative w-full h-[230px]">
           <img
