@@ -268,7 +268,7 @@ const projects = [
     live_url:
       "https://play.google.com/store/apps/details?id=com.jsjags01.HeadiesBox",
     live_url_icon: playstore,
-    live_url_text: "Download from Play Store",
+    live_url_text: "View on Play Store",
   },
   {
     name: "SchoolZone",
