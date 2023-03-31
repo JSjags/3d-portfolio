@@ -12,38 +12,7 @@ import CanvasLoader from "../Loader";
 
 const Ball = (props) => {
   const [decal] = useTexture([props.imgUrl]);
-  return (
-    <>
-      <Float
-        frustumCulled
-        speed={1.75}
-        rotationIntensity={1}
-        floatIntensity={2}
-      >
-        <ambientLight intensity={0.25} />
-        <directionalLight color="white" position={[0, 0, 0.05]} />
-        <pointLight color="indigo" intensity={1} position={[0, 0.2, 0.05]} />
-        <mesh castShadow receiveShadow scale={2.75}>
-          <sphereGeometry args={[1, 20, 20, 0, 20, 10, 10]} />
-          <meshStandardMaterial
-            color={props.color}
-            polygonOffset
-            polygonOffsetFactor={-5}
-            flatShading
-            roughness={1}
-          />
-
-          <Decal
-            position={[0, 0, 1]}
-            scale={0.8}
-            rotation={[2 * Math.PI, 0, 6.25]}
-            flatShading
-            map={decal}
-          />
-        </mesh>
-      </Float>
-    </>
-  );
+  return <></>;
 };
 
 const BallCanvas = ({ icon, color, name }) => {
