@@ -11,7 +11,7 @@ const SkillCard = ({ icon, color, name, index }) => {
     <Tilt
       glareEnable={true}
       glareBorderRadius="20px"
-      glareColor={"#00cea8"}
+      glareColor={color}
       glareMaxOpacity={0.4}
       gyroscope={true}
       perspective={200}
@@ -34,7 +34,9 @@ const SkillCard = ({ icon, color, name, index }) => {
           <img
             src={icon}
             alt={name}
-            className={`h-[90px] ${name === "Three JS" ? "invert-[80%]" : ""}
+            className={`h-[80px] ${name === "Three JS" ? "invert-[80%]" : ""} ${
+              name === "Next JS" ? "invert-[300%]" : ""
+            }
             ${scale === 1.2 ? "icon-up" : "icon-down"}
             `}
           />
