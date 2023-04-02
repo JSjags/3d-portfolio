@@ -64,7 +64,7 @@ const Connect = () => {
           className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
           I'm always looking to make meaningful, deep and valuable connections
-          with people. You can find me on any of the social or content platforms
+          with folks. You can find me on any of the social or content platforms
           below.
           <br />
           Please feel free to click on any card of your choice and let's

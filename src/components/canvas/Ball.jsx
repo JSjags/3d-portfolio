@@ -1,13 +1,4 @@
-import React, { Suspense, useState } from "react";
-import { Canvas } from "@react-three/fiber";
-import {
-  Decal,
-  Float,
-  Html,
-  OrbitControls,
-  Preload,
-  useTexture,
-} from "@react-three/drei";
+import React from "react";
 import CanvasLoader from "../Loader";
 
 const Ball = (props) => {
