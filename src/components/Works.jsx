@@ -17,6 +17,8 @@ const ProjectCard = ({
   live_url,
   live_url_icon,
   live_url_text,
+  demo_link,
+  demo_link_icon,
 }) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
@@ -35,6 +37,23 @@ const ProjectCard = ({
           />
 
           <div className="absolute inset-0 flex justify-end flex-col gap-3 m-3 card-img_hover">
+            {demo_link && (
+              <div
+                onClick={() =>
+                  window.open(demo_link, "_blank", "noreferrer noopener")
+                }
+                // onMouseOver={() => setShowGithubText(true)}
+                // onMouseOut={() => setShowGithubText(false)}
+                className="github-link black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer gap-[10px]"
+              >
+                <img
+                  src={demo_link_icon}
+                  alt="github"
+                  className="w-1/2 h-1/2 object-contain invert"
+                />
+                <span className="whitespace-nowrap">Watch demo</span>
+              </div>
+            )}
             <div
               onClick={() =>
                 window.open(source_code_link, "_blank", "noreferrer noopener")
@@ -67,6 +86,7 @@ const ProjectCard = ({
             </div>
           </div>
         </div>
+
         <div className="mt-5">
           <h3 className="text-white font-bold text-[24px]">{name}</h3>
           <p className="mt-2 text-secondary text-[14px]">{description}</p>

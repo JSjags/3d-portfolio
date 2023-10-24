@@ -30,6 +30,12 @@ import {
   medium,
   playstore,
   web_icon,
+  flutter,
+  download_icon,
+  watch_video,
+  buyout_poster,
+  oaks,
+  dart,
 } from "../assets";
 
 export const navLinks = [
@@ -49,11 +55,11 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Web Developer",
+    title: "Frontend Developer",
     icon: web,
   },
   {
-    title: "React Native Developer",
+    title: "Mobile App Developer",
     icon: mobile,
   },
   {
@@ -115,6 +121,11 @@ const technologies = [
     color: "white",
   },
   {
+    name: "Dart",
+    icon: dart,
+    color: "dodgerblue",
+  },
+  {
     name: "Three JS",
     icon: threejs,
     color: "silver",
@@ -123,6 +134,11 @@ const technologies = [
     name: "React JS",
     icon: reactjs,
     color: "lightblue",
+  },
+  {
+    name: "Flutter",
+    icon: flutter,
+    color: "blue",
   },
   {
     name: "Redux Toolkit",
@@ -163,7 +179,7 @@ const technologies = [
 
 const experiences = [
   {
-    title: "React JS Developer",
+    title: "React Developer",
     company_name: "Freelance",
     icon: my_logo,
     iconBg: "#000000",
@@ -176,7 +192,7 @@ const experiences = [
     ],
   },
   {
-    title: "React Native Developer",
+    title: "Mobile Developer",
     company_name: "Team OffLoad",
     icon: offload,
     iconBg: "#ffffff",
@@ -206,12 +222,28 @@ const experiences = [
     company_name: "Ventaco Inc",
     icon: ventaco,
     iconBg: "#ffffff",
-    date: "Jan 2023 - Present",
+    date: "Jan 2023 - April 2023",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
+      "Engaged with cross-functional squads, comprising designers, product managers, and fellow developers, to forge premium products.",
+      "Actively took part in code assessments and shared valuable insights with fellow developers.",
+      "Led the charge in crafting and sustaining web applications through React.js and associated technologies.",
+      "Executed responsive design strategies and upheld cross-browser compatibility.",
+      "Incorporated and seamlessly fused third-party APIs for data validation.",
+    ],
+  },
+  {
+    title: "Full stack Developer",
+    company_name: "Oaks Intelligence",
+    icon: oaks,
+    iconBg: "#000000",
+    date: "April 2023 - Present",
+    points: [
+      "Developing and maintaining applications (web and mobile) using React.js, flutter and other related technologies.",
+      "Innovatively integrating AI technologies into applications, enhancing user experiences and optimizing decision-making processes through intelligent automation and predictive insights.",
       "Consuming and Integrating third-party APIs for data verification.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+      "Brainstorming sessions with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
       "Implementing responsive design and ensuring cross-browser compatibility.",
+      "Crafting efficient APIs for seamless communication between front-end and back-end systems",
       "Participating in code reviews and providing constructive feedback to other developers.",
     ],
   },
@@ -345,6 +377,34 @@ const projects = [
     live_url: "https://gamerange.onrender.com",
     live_url_icon: web_icon,
     live_url_text: "View Live Demo",
+  },
+  {
+    name: "BuyOut",
+    description:
+      "BuyOut is a sleek e-commerce Android app powered by Flutter, offering cart management, wishlists, secure checkout, diverse payment options, and easy order tracking for a seamless shopping experience.",
+    tags: [
+      {
+        name: "Dart",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "flutter",
+        color: "cyan-text-gradient",
+      },
+      {
+        name: "firebase",
+        color: "orange-text-gradient",
+      },
+    ],
+    image: buyout_poster,
+    demo_link:
+      "https://drive.google.com/file/d/1KvxlS5v8S-rnwa-2Wh5eYL1J7_MWhoza/view?usp=share_link",
+    demo_link_icon: watch_video,
+    source_code_link: "https://github.com/JSjags/e-commerce_flutter",
+    live_url:
+      "https://drive.google.com/file/d/1oYF2k0BHYf99mau3QpCzJyaeg5bB_l2O/view?usp=share_link",
+    live_url_icon: download_icon,
+    live_url_text: "Download APK",
   },
 ];
 

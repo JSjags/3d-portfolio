@@ -16,15 +16,16 @@ const Hero = () => {
         <div>
           <h1 className={`${styles.heroHeadText} font-semibold `}>
             Hi, I'm{" "}
-            <span className="font-monosans font-normal text-[#915eff]">
+            <span className="font-monosans font-normal from-[#915eff] text-transparent to-cyan-300 bg-gradient-to-b fill-transparent bg-clip-text">
               Jesse
             </span>
           </h1>
 
           <br className="2xl:block hidden" />
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            I develop user interfaces, mobile applications
-            <br className="xl:block hidden" /> and web applications.
+            Crafting Digital Dreams:
+            <br className="xl:block hidden" /> Fullstack Developer
+            Extraordinaire
           </p>
         </div>
       </div>
