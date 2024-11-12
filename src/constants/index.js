@@ -35,6 +35,7 @@ import {
   watch_video,
   buyout_poster,
   oaks,
+  tvio,
   dart,
 } from "../assets";
 
@@ -179,7 +180,7 @@ const technologies = [
 
 const experiences = [
   {
-    title: "React Developer",
+    title: "Frontend Developer",
     company_name: "Freelance",
     icon: my_logo,
     iconBg: "#000000",
@@ -218,7 +219,7 @@ const experiences = [
   //   ],
   // },
   {
-    title: "Full stack Developer",
+    title: "FullStack Developer",
     company_name: "Ventaco Inc",
     icon: ventaco,
     iconBg: "#ffffff",
@@ -232,7 +233,7 @@ const experiences = [
     ],
   },
   {
-    title: "Full stack Developer",
+    title: "FullStack Developer",
     company_name: "Oaks Intelligence",
     icon: oaks,
     iconBg: "#000000",
@@ -245,6 +246,19 @@ const experiences = [
       "Implementing responsive design and ensuring cross-browser compatibility.",
       "Crafting efficient APIs for seamless communication between front-end and back-end systems",
       "Participating in code reviews and providing constructive feedback to other developers.",
+    ],
+  },
+  {
+    title: "FullStack Developer",
+    company_name: "Tvio",
+    icon: tvio,
+    iconBg: "#ffffff",
+    date: "November 2023 - Present",
+    points: [
+      "Developing and maintaining app.foniso.team, a social media web application exclusively for sports, using React, Node.js, and Docker.",
+      "Optimizing application through debugging and implementing best practices in testing with Jest and Vitest.",
+      "Collaborating with the product team to align development with user-friendly designs",
+      "Designing and building the landing page, boosting user engagement and first impressions.",
     ],
   },
 ];

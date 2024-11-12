@@ -42,6 +42,7 @@ import starbucks from "./company/starbucks.png";
 import ventaco from "./company/ventaco.jpeg";
 import offload from "./company/Kite.svg";
 import oaks from "./company/oaks.png";
+import tvio from "./company/tvio.svg";
 
 import offload_poster from "./offload.jpg";
 import schoolzone_poster from "./schoolzone-poster.jpg";
@@ -81,6 +82,7 @@ export {
   ventaco,
   offload,
   oaks,
+  tvio,
   offload_poster,
   schoolzone_poster,
   gamerange_poster,
